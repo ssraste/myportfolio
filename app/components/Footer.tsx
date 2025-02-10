@@ -16,7 +16,7 @@ const Footer = () => {
             <Link href="https://linkedin.com/in/srushti-raste" className="hover:text-blue-400 transition duration-300">
               <FaLinkedin size={24} />
             </Link>
-            <Link href="mailto:srushtiraste44@gmail.com" className="hover:text-blue-400 transition duration-300">
+            <Link href="mailto:sru@bu.edu" className="hover:text-blue-400 transition duration-300">
               <FaEnvelope size={24} />
             </Link>
           </div>

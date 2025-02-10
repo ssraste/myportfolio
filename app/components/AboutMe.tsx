@@ -21,15 +21,10 @@ const AboutMe = () => {
           className="max-w-3xl mx-auto text-center bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg"
         >
           <p className="mb-6">
-            I'm Srushti Raste, a passionate robotics engineer with a keen interest in developing innovative solutions to
-            complex problems. My expertise lies in designing and implementing robotic systems that push the boundaries
-            of what's possible in automation and artificial intelligence.
+          I'm Srushti Raste, a passionate robotics engineer dedicated to developing innovative solutions for complex problems. I recently graduated from <strong>Boston University</strong> with a Master of Science degree in Robotics and Autonomous Systems, and I also hold a B.Tech degree in Electronics Engineering from <strong>K.J. Somaiya College of Engineering</strong>.
           </p>
           <p>
-            With a strong foundation in mechanical engineering, computer science, and electronics, I strive to create
-            robots that are not only functional but also intuitive and user-friendly. My goal is to contribute to the
-            advancement of robotics technology and its applications in various industries, from manufacturing to
-            healthcare.
+          With a strong foundation in the design and control of robotic systems, Hardware integration & Programming, Computer-Aided Design, and Deep Learning, I aim to create robots that contribute to a better future. My focus areas include advancements in surgical robotics, rehabilitation technology, and assistive robotics. 
           </p>
         </motion.div>
       </div>

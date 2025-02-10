@@ -9,12 +9,12 @@ import type React from "react" // Added import for React
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Srushti Raste - Robotics Engineer",
+  title: "Srushti Raste",
   description: "Portfolio of Srushti Raste, a robotics engineer showcasing projects and skills.",
   icons: {
     icon: [
       {
-        url: "/favicon.ico",
+        url: "/robo.png",
         sizes: "any",
       },
     ],
