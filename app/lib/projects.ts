@@ -259,21 +259,6 @@ export const projects: Project[] = [
     fullDescription: `
       <p>FlexAssist is an innovative project aimed at developing a vision-controlled soft robotic glove to assist individuals with partial motor loss in performing grasping tasks. This project combines elements of computer vision, soft robotics, and assistive technology to create a user-friendly and effective solution for improving quality of life.</p>
       <h3 style="text-align: center;"><strong>Project Overview</strong></h3>
-      <ul>
-        <li>Soft robotic glove design for comfortable and safe interaction with the user's hand</li>
-        <li>Computer vision system for object detection and classification</li>
-        <li>Integration of vision system with glove control for automated grasping assistance</li>
-        <li>Customizable grasping patterns for different object types and user needs</li>
-        <li>User interface for easy control and monitoring of the glove's operations</li>
-      </ul>
-      <h3 style="text-align: center;"><strong>Technical Details</strong></h3>
-      <ul>
-        <li>Utilized soft pneumatic actuators for finger movement</li>
-        <li>Implemented object detection using deep learning models (e.g., YOLO or SSD)</li>
-        <li>Developed a control system to translate visual information into appropriate glove actuation</li>
-        <li>Created a modular design for easy maintenance and upgrades</li>
-      </ul>
-
       <h3 style="text-align: center;"><strong>Grasp Detection</strong></h3>
        <div style="display: flex; justify-content: center; gap: 20px; align-items: center;">
          <div style="text-align: center;">
@@ -301,17 +286,62 @@ export const projects: Project[] = [
     shortDescription: "Developed a low-cost Quadcopter for real-time detection of humans",
     fullDescription: `
       <p>In this project, my peer and I development of a low-cost quadcopter capable of detecting humans in real-time for search and rescue appilcations.</p>
-      <p> We custom made the chassis in SolidWorks along with custom flight controller on EasyEDA 
-      <h3 style="text-align: center;"><strong>Chassis</strong></h3>
+      <h3 style="text-align: center;"><strong>Chassis Design</strong></h3>
+      <p> We designed our chassis using SolidWorks and 3D printed it with PLA. </p>
+      <div style="display: flex; justify-content: center; gap: 15px;">
+       <figure>
+         <img src="quadbase.png" alt="Quad Base" width="350" style="display: block;">
+         <figcaption style="text-align: center;"><em>Base</em></figcaption>
+       </figure>
+       <figure>
+         <img src="quadtop.png" alt="Quad Top" width="350" style="display: block;">
+          <figcaption style="text-align: center;"><em>Top</em></figcaption>
+        </figure>
+      </div>
+\b
+     <figure style="text-align: center;">
+       <div style="display: flex; justify-content: center; gap: 15px;">
+         <img src="quadarm.png" alt="Quad Arm" width="350" style="display: block;">
+          <img src="quadarm1.png" alt="Quad Arm 1" width="350" style="display: block;">
+       </div>
+       <figcaption><em>Arm</em></figcaption>
+     </figure>
+\b    
+     <figure style="text-align: center;">
+       <div style="display: flex; justify-content: center; gap: 15px;">
+         <img src="quadchassis.png" alt="Quad Arm" width="350" style="display: block;">
+          <img src="quadchassis1.png" alt="Quad Arm 1" width="350" style="display: block;">
+       </div>
+       <figcaption><em>3D Printed Arm</em></figcaption>
+     </figure>
+      \b
 
       <h3 style="text-align: center;"><strong>Custom Flight Controller</strong></h3>
+      <p> We custom-designed and soldered the flight controller, which includes a set of pin headers to receive roll, pitch, yaw, and throttle signals from the receiver module. These signals are then sent to the Arduino Nano. 
+      The MPU 6050 sensor is initially calibrated to minimize offsets and provides the current orientation of the quadcopter. Using this feedback along with the desired orientation values, the Arduino sends PWM signals to the electronic speed controller, which then regulates the four DC motors and the propellers. For flight stability, we implemented PID control for the stability. 
+     </p>
+      <div style="display: flex; flex-direction: column; align-items: center;">
+        <img src="quadfcs.png" alt="Quadfc" width="450" style="display: block;">
+        <figcaption><em>Flight-Controller Schematic</em></figcaption>
+     </div>
 
-      <h3 style="text-align: center;"><strong>Object Detection</strong></h3>
+      \b
+     <figure style="text-align: center;">
+       <div style="display: flex; justify-content: center; gap: 15px;">
+        <img src="quadfcpcb.png" alt="Quadfcpcb" width="170" style="display: block;">
+        <img src="quadfc.png" alt="Quadfcpcb" width="170" style="display: block;">
+       </div>
+       <figcaption><em>Flight-Controller</em></figcaption>
+     </figure>
+
+      <h3 style="text-align: center;"><strong>Detection</strong></h3>
+      
 
 
       <h3 style="text-align: center;"><strong>Custom Transmitter</strong></h3>
 
       <h3 style="text-align: center;"><strong>Custom Receiver</strong></h3>
+
 
     `,
     technologies: ["Custom Designed", "PCB & CAD", "Hardware & Software", "TensorFlow"],
