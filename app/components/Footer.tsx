@@ -10,7 +10,7 @@ const Footer = () => {
             <p>Made with ❤️ by Srushti Raste</p>
           </div>
           <div className="flex space-x-4">
-            <Link href="https://github.com/srushti-raste" className="hover:text-blue-400 transition duration-300">
+            <Link href="https://github.com/ssraste" className="hover:text-blue-400 transition duration-300">
               <FaGithub size={24} />
             </Link>
             <Link href="https://linkedin.com/in/srushti-raste" className="hover:text-blue-400 transition duration-300">

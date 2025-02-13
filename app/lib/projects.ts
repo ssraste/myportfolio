@@ -11,7 +11,7 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: 1,
-    title: "Object Manipulation in Musculoskeletal Simulations using RL",
+    title: "Object Manipulation in Musculoskeletal Simulations using Reinforcement Learning",
     shortDescription: "Trained Musculoskeletal arm model for object manipulation in MuJoCo using PPO and SAC",
     fullDescription: `
       <h3 style="text-align: center;"><strong>Project Overview</strong></h3>
@@ -283,34 +283,35 @@ export const projects: Project[] = [
   {
     id: 7,
     title: "Human Detecting Quadcopter",
-    shortDescription: "Developed a low-cost Quadcopter for real-time detection of humans",
+    shortDescription: "Developed a low-cost Quadcopter from scratch for real-time detection of humans",
     fullDescription: `
-      <p>In this project, my peer and I development of a low-cost quadcopter capable of detecting humans in real-time for search and rescue appilcations.</p>
+      <p>In this project, my peer and I development of a low-cost quadcopter from scratch capable of detecting humans in real-time for search and rescue appilcations.</p>
+      \b
       <h3 style="text-align: center;"><strong>Chassis Design</strong></h3>
       <p> We designed our chassis using SolidWorks and 3D printed it with PLA. </p>
       <div style="display: flex; justify-content: center; gap: 15px;">
        <figure>
-         <img src="quadbase.png" alt="Quad Base" width="350" style="display: block;">
+         <img src="quadbase.png" alt="Quad Base" width="300" style="display: block;">
          <figcaption style="text-align: center;"><em>Base</em></figcaption>
        </figure>
        <figure>
-         <img src="quadtop.png" alt="Quad Top" width="350" style="display: block;">
+         <img src="quadtop.png" alt="Quad Top" width="300" style="display: block;">
           <figcaption style="text-align: center;"><em>Top</em></figcaption>
         </figure>
       </div>
 \b
      <figure style="text-align: center;">
        <div style="display: flex; justify-content: center; gap: 15px;">
-         <img src="quadarm.png" alt="Quad Arm" width="350" style="display: block;">
-          <img src="quadarm1.png" alt="Quad Arm 1" width="350" style="display: block;">
+         <img src="quadarm.png" alt="Quad Arm" width="300" style="display: block;">
+          <img src="quadarm1.png" alt="Quad Arm 1" width="300" style="display: block;">
        </div>
-       <figcaption><em>Arm</em></figcaption>
+       <figcaption><em>Arm {67(S)&72(S) represents my teammates and my Id numbers} </em></figcaption>
      </figure>
 \b    
      <figure style="text-align: center;">
        <div style="display: flex; justify-content: center; gap: 15px;">
-         <img src="quadchassis.png" alt="Quad Arm" width="350" style="display: block;">
-          <img src="quadchassis1.png" alt="Quad Arm 1" width="350" style="display: block;">
+         <img src="quadchassis.png" alt="Quad Arm" width="300" style="display: block;">
+          <img src="quadchassis1.png" alt="Quad Arm 1" width="300" style="display: block;">
        </div>
        <figcaption><em>3D Printed Arm</em></figcaption>
      </figure>
@@ -320,27 +321,42 @@ export const projects: Project[] = [
       <p> We custom-designed and soldered the flight controller, which includes a set of pin headers to receive roll, pitch, yaw, and throttle signals from the receiver module. These signals are then sent to the Arduino Nano. 
       The MPU 6050 sensor is initially calibrated to minimize offsets and provides the current orientation of the quadcopter. Using this feedback along with the desired orientation values, the Arduino sends PWM signals to the electronic speed controller, which then regulates the four DC motors and the propellers. For flight stability, we implemented PID control for the stability. 
      </p>
-      <div style="display: flex; flex-direction: column; align-items: center;">
-        <img src="quadfcs.png" alt="Quadfc" width="450" style="display: block;">
-        <figcaption><em>Flight-Controller Schematic</em></figcaption>
-     </div>
 
       \b
      <figure style="text-align: center;">
        <div style="display: flex; justify-content: center; gap: 15px;">
-        <img src="quadfcpcb.png" alt="Quadfcpcb" width="170" style="display: block;">
-        <img src="quadfc.png" alt="Quadfcpcb" width="170" style="display: block;">
-       </div>
+         <img src="quadfcpcb.png" alt="Quadfcpcb" width="150" style="display: block;">
+         <img src="quadp.jpg" alt="Quadfcp" width="150" style="display: block;">
+         <img src="quadfc.png" alt="Quadfcpcb" width="150" style="display: block;">
+        </div>
        <figcaption><em>Flight-Controller</em></figcaption>
      </figure>
-
+  
+      <figure style="text-align: center;">
+       <div style="display: flex; justify-content: center; gap: 15px;">
+         <img src="quadfctest.png" alt="Quadfcpcb" width="150" style="display: block;">
+         <img src="quadfctest1.png" alt="Quadfcpcb" width="150" style="display: block;">
+       </div>
+       <figcaption><em>Custom Flight-Controller Testing</em></figcaption>
+     </figure>
+ \b
       <h3 style="text-align: center;"><strong>Detection</strong></h3>
-      
+      <p> For human detection, we used a Raspberry Pi 4B paired with a webcam and TensorFlow Lite for computer vision tasks.
+      \b
+     <div style="display: flex; justify-content: center; align-items: center;">
+        <video width="500" height="500" controls style="display: block;">
+          <source src="quaddetection.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+     </div>
+     \b
+     <p> <em> Due to availability of Raspberry Pi Pico and weight considerations of the drone, we shifted to Rpi Pico, which provided similar functionalities.</em> </p>
+     \b
+
+    <h3 style="text-align: center;"><strong>Custom Transmitter</strong></h3>
 
 
-      <h3 style="text-align: center;"><strong>Custom Transmitter</strong></h3>
 
-      <h3 style="text-align: center;"><strong>Custom Receiver</strong></h3>
 
 
     `,

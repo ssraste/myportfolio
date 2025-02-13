@@ -22,7 +22,7 @@ const AboutMe = () => {
         >
           <div className="w-48 h-48 mb-6">
             <img
-              src="/mypic.jpg"  // Replace with your actual image path
+              src="mypic.jpg"  // Replace with your actual image path
               alt="Srushti Raste"
               className="w-full h-full rounded-full object-cover shadow-lg"
             />
