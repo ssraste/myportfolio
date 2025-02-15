@@ -15,9 +15,9 @@ export const projects: Project[] = [
     shortDescription: "Trained Musculoskeletal arm model for object manipulation in MuJoCo using PPO and SAC",
     fullDescription: `
       <h3 style="text-align: center;"><strong>Project Overview</strong></h3>
-      <p>In this project, I trained a virtual musculoskeletal arm model to perform hand manipulation pick and place task. The arm model should grasp, lift, and place an object into a designated target box. I used MuJoCo simulator and MyoSuite's Relocation environment.
-        For this, I used PPO reinforcement learning algorithm as it provides stable training in continuous control tasks. </p>
-      <p> Initially I used MyoSuite's default reward structure, then optimized it with Custom intermediate rewards and penalties to improve the training time and later fine-tuned Hyperparameter to get higher and stable rewards.</p>
+      <p>In this project, I trained a virtual musculoskeletal arm model to perform hand manipulation pick and place task. The arm model should grasp, lift, and place an object into a designated target box. I used <strong> MuJoCo simulator </strong>and <strong> MyoSuite's </strong> Relocation environment.
+        For this, I used <strong> Proximal Policy Optimization </strong>algorithm as it provides stable training in continuous control tasks. </p>
+      <p> Initially I used MyoSuite's default reward structure, then optimized it with <strong> Custom intermediate rewards and penalties </strong> to improve the training time and later <strong> fine-tuned Hyperparameter</strong> to get higher and stable rewards.</p>
       <img src="myo poses.png" alt="poses" width="550" style="display: block; margin: auto;">
       \b
       <h3 style="text-align: center;"><strong>Training</strong></h3>
@@ -31,7 +31,7 @@ export const projects: Project[] = [
        </video>
       </p>
       \b
-      <p>Limitations: 
+      <p><strong> Limitations: </strong>
        After more than a million timesteps, the value loss decreases slowly, while the policy loss remains erratic and stabilizes gradually. The reward curve shows slow improvement. 
        The Overall rewards are improving but still negative due to the complexity of controlling a musculoskeletal system with many degrees of freedom (DOFs). 
        Occasionally, there are spikes in negative rewards as the agent explores new states.
@@ -39,7 +39,7 @@ export const projects: Project[] = [
       \b
       <p>
       <h4>2. Training with Custom Rewards and Tuned Hyperparameters</h4>
-      <p>To overcome the limitations of default settings, I introduced a custom reward structure to provide intermediate feedback, which encouraged desired behaviors and Penalized undesired actions. Later, I also tuned the hyperparameters for stable updates. </p>
+      <p>To overcome the limitations of default settings, I introduced a custom reward structure to provide intermediate feedback, which encouraged desired behaviors and Penalized undesired actions. Later, I also fine-tuned the hyperparameters for stable updates. </p>
         <img src="myo custom rewards table.png" alt="customreward" width="420" style="display: block; margin: auto;">
 
         <video width="510" height="360" controls style="display: block; margin: auto;" >
@@ -60,30 +60,44 @@ export const projects: Project[] = [
     id: 2,
     title: "Autonomous Driving Using CARLA Simulator",
     shortDescription:
-      "Implemented imitation and reinforcement learning for autonomous vehicle control in CARLA Simulator.",
+      "Implemented Deep Learning and Modular Control for autonomous vehicles in CARLA.",
     fullDescription: `
-      <p>In this This project focused on implementing imitation and reinforcement learning techniques for autonomous vehicle control in the CARLA Simulator. This project aimed to develop and compare different approaches for training autonomous vehicles to navigate complex urban environments.</p>
-      <h3>Key Features:</h3>
-      <ul>
-        <li>Utilized the CARLA Simulator for realistic urban driving scenarios</li>
-        <li>Implemented imitation learning to mimic expert driving behavior</li>
-        <li>Developed a Deep Q-Learning algorithm for reinforcement learning</li>
-        <li>Compared the performance of imitation learning and reinforcement learning approaches</li>
-        <li>Evaluated the autonomous vehicle's ability to navigate traffic, follow traffic rules, and handle various weather conditions</li>
-      </ul>
+
+      <p>This project focuses on implementing <strong> Imitation Learning </strong> & <strong> Reinforcement Learning </strong> techniques for autonomous vehicle control in the CARLA Simulator. I also created a <strong> Modular Control Pipeline </strong> including Lane Detection technique, Path planning using Way-point prediction and Controllers (PID & Stanley).</p>
+      <p> I used <strong>CARLA simulator </strong> with dynamic weather conditions and spawned pedestrains to create real-word scenarios. </p>
+      \b 
+      <h3 style="text-align: center;"><strong>Agent Data Collection & Imitation Learning</strong></h3> 
+      \b
+        <div style="display: flex; justify-content: flex-start; align-items: center; gap: 20px;">
+           <img src="carla.png" alt="wrist.jpg" width="350" style="display: block;">
+          <div>
+            <p> I created a control agent and collected the driving data. Using this dataset, I trained the control agent to imitate driving by applying a neural network for imitation learning, aiming to replicate expert demonstrations. </p>
+            \b
+            <p><strong> Limitation: </strong> Unable to adapt to situations where a pedestrian suddenly appeared in front of the vehicle.</p>
+          </div> 
+       </div>
 \b
-      <h3 style="text-align: center;"><strong>Deep Q-Learning</strong></h3>
-       <div style="display: flex; justify-content: center; gap: 20px; align-items: center;">
+      <h3 style="text-align: center;"><strong>Deep Q-Learning</strong></h3> 
+      \b
+       <div style="display: flex; justify-content: flex-start; align-items: center; gap: 20px;">
+         <img src="carlarl.png" alt="carlarl.png" width="350" style="display: block;">
+          <div>
+            <p> -----
+         </div>
+        </div>
+
+\b
+       <div style="display: flex; justify-content: center; gap: 10px; align-items: center;">
          <div style="text-align: center;">
            <h5>Without Collision Penalties</h5>
-           <video width="330" height="1050" controls style="display: block;">
+           <video width="600" height="1050" controls style="display: block;">
               <source src="carlacollision.mp4" type="video/mp4">
               Your browser does not support the video tag.
            </video>
           </div>
           <div style="text-align: center;">
             <h5>With Collision Penalties</h5>
-            <video width="330" height="1050" controls style="display: block;">
+            <video width="600" height="1050" controls style="display: block;">
               <source src="carlacollision2.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
@@ -101,44 +115,42 @@ export const projects: Project[] = [
   {
     id: 3,
     title: "Wrist Rehabilitation Sleeve with Gamification",
-    shortDescription: "Designed a gamified robotic glove for wrist rehabilitation using Pygame.",
+    shortDescription: "Designed a wrist glove with gamified rehabilitation using Pygame.",
     fullDescription: `
       <h3 style="text-align: center;"><strong>Motivation</strong></h3>
-      <p>Each year, around 15 million people suffer strokes, making it a significant cause of death and disability. Traditional stroke recovery therapy can lead to therapist fatigue and high costs. However, robotic-assisted treatment has shown promise in improving recovery for hand impairments and reducing therapist workloads. Additionally, gamification in rehabilitation boosts patient motivation and outcomes, often exceeding traditional methods.</p>
+      <p>Traditional stroke recovery therapy can lead to therapist fatigue and high costs. However, robotic-assisted treatment has shown promise in improving recovery for hand impairments and reducing therapist workloads. Gamification in rehabilitation boosts patient motivation and outcomes, often exceeding traditional methods.</p>
      \b
-      <img src="wrist.jpg" alt="wrist.jpg" width="500" style="display: block; margin: auto;">
+    <div style="display: flex; justify-content: space-between; align-items: center; gap: 1px;">
+      <img src="wrist design.png" alt="wrist design" width="300" style="display: block;">
+      <img src="wrist.jpg" alt="wrist.jpg" width="400" style="display: block;">
+    </div>
       \b
       <h3 style="text-align: center;"><strong>Project Overview</strong></h3>
       <p>Two peers and I designed and developed a low-cost robotic sleeve for wrist rehabilitation. The sleeve facilitates movement in four directions: abduction, adduction, extension, and flexion. To enhance patient engagement, we created a game where patients catch virtual spheres using their wrist movements. The spheres appear on screen within the patient's range of motion, allowing for customization to meet individual patient needs. Patients can track missed and total scores, motivating them to catch as many spheres as possible to enhance their rehabilitation. Therapists can customize the game with unique patterns for patients to follow, focusing on accuracy or speed, while also tracking their progress over time.</p>
-      \b
-      <h3 style="text-align: center;"><strong>Design</strong></h3>
-      <img src="wrist design.png" alt="wrist design" width="350" style="display: block; margin: auto;">
       \b
       <h3 style="text-align: center;"><strong>System Overview</strong></h3>
       <ul>
         <li><strong>1. IMUs:</strong>
           <ul>
-            <li>Two IMUs are used: one on the wrist base (stationary) as a reference point, and the other on the knuckles to track wrist movement.</li>
-            <li>The IMUs measure yaw (adduction & abduction) and pitch (flexion & extension), with the knuckle IMU's motion interpreted relative to the base IMU for accurate tracking.</li>
-            <li>IMU data updates the virtual hand's position on the screen, providing real-time feedback on wrist movement and sphere alignment.</li>
-            <li>Real-time IMU data is also sent to the Arduino for motor control, enabling precise wrist guidance.</li>
+            <li>- Two IMUs are used: one on the wrist base as a reference point, and the other on the knuckles to track wrist movement.</li>
+            <li>- The IMUs measure yaw (adduction & abduction) and pitch (flexion & extension), with the knuckle IMU's motion interpreted relative to the base IMU for accurate tracking.</li>
+            <li>- IMU data updates the virtual hand's position on the screen, providing real-time feedback on wrist movement and sphere alignment.</li>
+            <li>- Real-time IMU data is also sent to the Arduino for motor control, enabling precise wrist guidance.</li>
           </ul>
         </li>
         <li><strong>2. Arduino:</strong>
           <ul>
-            <li>An Arduino UNO serves as the central controller.</li>
-            <li>It processes real-time IMU data, sends commands to the stepper motors, and interfaces with a rehabilitation game.</li>
+            - Arduino UNO processes real-time IMU data, sends commands to the stepper motors, and interfaces with a rehabilitation game.</li>
           </ul>
         </li>
         <li><strong>3. Motor & Driver:</strong>
           <ul>
-            <li>Motion is driven by stepper motors controlled via ULN2003 motor drivers.</li>
-            <li>The system enables precise flexion/extension and abduction/adduction movements.</li>
+            <li>- Motion is driven by stepper motors controlled via ULN2003 motor drivers which enables precise flexion/extension and abduction/adduction movements.</li>
           </ul>
         </li>
         <li><strong>4. Elastic Bands:</strong>
           <ul>
-            <li>Elastic bands are used to return the wrist to its neutral position after the motors release tension.</li>
+            <li>- Elastic bands are used to return the wrist to its neutral position after the motors release tension.</li>
           </ul>
         </li>
       </ul>
@@ -224,7 +236,6 @@ export const projects: Project[] = [
       <img src="snakechallenge.png" alt="snakechallenge" width="500" style="display: block; margin: auto;">
       <p>a) The initial circular pneunet structure had stability issues, leading to a redesign into a trapezoidal shape for greater robustness. </p>
       <p>b) Air bubbles often appeared when casting Dragon Skin 10 silicone, requiring careful fabrication techniques. </p>
-      </ul>
     `,
     technologies: [
       "Soft Robotics",
@@ -237,10 +248,9 @@ export const projects: Project[] = [
     id: 9,
     title: "Path Planning using RRT star",
     shortDescription:
-      ".....",
+      "Implementing RRT & RRT* path planning algorithms",
     fullDescription: `
-      <p>This project focused on developing a multi-robot system that mimics the behavior of a seven-segment display. The goal was to explore and implement techniques for robot coordination, localization, and formation control.</p>
-      <img src="" alt="CPS" width="450" style="display: block; margin: auto;">
+      <img src="" alt="RRT" width="450" style="display: block; margin: auto;">
       <h3>Project Ove</h3>
     
       <video width="510" height="360" controls style="display: block; margin: auto;" >
@@ -252,33 +262,29 @@ export const projects: Project[] = [
     technologies: ["MATLAB", "Path Planning Alogrithms"],
   },
   {
-    id: 6,
-    title: "FlexAssist: Vision-Controlled Soft Robotic Glove for Assisted Grasping",
+    id: 10,
+    title: "Soft Actuators",
     shortDescription:
-      "Designed a vision-controlled soft robotic glove to assist individuals with partial motor loss in grasping tasks.",
+      "Fabricated soft actuators, also conducted mechanical testing on them ",
     fullDescription: `
-      <p>FlexAssist is an innovative project aimed at developing a vision-controlled soft robotic glove to assist individuals with partial motor loss in performing grasping tasks. This project combines elements of computer vision, soft robotics, and assistive technology to create a user-friendly and effective solution for improving quality of life.</p>
-      <h3 style="text-align: center;"><strong>Project Overview</strong></h3>
-      <h3 style="text-align: center;"><strong>Grasp Detection</strong></h3>
-       <div style="display: flex; justify-content: center; gap: 20px; align-items: center;">
-         <div style="text-align: center;">
-           <h5>Pinch Grip</h5>
-           <video width="330" height="1050" controls style="display: block;">
-              <source src="flexpinch.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-           </video>
-          </div>
-          <div style="text-align: center;">
-            <h5>Spherical Grip</h5>
-            <video width="330" height="1050" controls style="display: block;">
-              <source src="flexspherical.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-           </div> 
-        </div>
+      <p>In this project, I implemented RRT and RRT* path planning algorithm<p>
+      <img src="" alt="RRT" width="450" style="display: block; margin: auto;">
+
+      <h3>Pneunets</h3>
+      
+      <h3>Mckibben Artificial Muscles</h3>
+
+      <h3>Fiber-reinforced actuators</h3>
+
+      <h3>SMAs</h3>
+    
+      <video width="510" height="360" controls style="display: block; margin: auto;" >
+        <source src="" type="video/mp4">
+         Your browser does not support the video tag.
+       </video>
 
     `,
-    technologies: ["Rehabilitation Soft Robotic Glove", "Computer Vision", "Hardware"],
+    technologies: ["FEA-Abaqus", "SMA", "Soft Actuators", "Mechanical Testing"],
   },
   {
     id: 7,
@@ -288,7 +294,7 @@ export const projects: Project[] = [
       <p>In this project, my peer and I development of a low-cost quadcopter from scratch capable of detecting humans in real-time for search and rescue appilcations.</p>
       \b
       <h3 style="text-align: center;"><strong>Chassis Design</strong></h3>
-      <p> We designed our chassis using SolidWorks and 3D printed it with PLA. </p>
+      <p> We designed our chassis using <strong>SolidWorks</strong> and 3D printed it with PLA. </p>
       <div style="display: flex; justify-content: center; gap: 15px;">
        <figure>
          <img src="quadbase.png" alt="Quad Base" width="300" style="display: block;">
@@ -318,8 +324,8 @@ export const projects: Project[] = [
       \b
 
       <h3 style="text-align: center;"><strong>Custom Flight Controller</strong></h3>
-      <p> We custom-designed and soldered the flight controller, which includes a set of pin headers to receive roll, pitch, yaw, and throttle signals from the receiver module. These signals are then sent to the Arduino Nano. 
-      The MPU 6050 sensor is initially calibrated to minimize offsets and provides the current orientation of the quadcopter. Using this feedback along with the desired orientation values, the Arduino sends PWM signals to the electronic speed controller, which then regulates the four DC motors and the propellers. For flight stability, we implemented PID control for the stability. 
+      <p> We custom-designed and soldered the flight controller, which includes a set of <strong>pin headers</strong> to receive roll, pitch, yaw, and throttle signals from the receiver module. 
+      The <strong> MPU 6050 </strong> is initially calibrated to minimize offsets and provides the current orientation of the quadcopter. Using this feedback along with the desired orientation values, the <strong>Arduino Nano </strong> sends PWM signals to the <strong> electronic speed controller</strong>, which then regulates the four <strong>DC motors </strong> and the <strong> propellers </strong>. For flight stability, we implemented <strong> PID control </strong> for the stability. 
      </p>
 
       \b
@@ -341,7 +347,7 @@ export const projects: Project[] = [
      </figure>
  \b
       <h3 style="text-align: center;"><strong>Detection</strong></h3>
-      <p> For human detection, we used a Raspberry Pi 4B paired with a webcam and TensorFlow Lite for computer vision tasks.
+      <p> For human detection, we used a <strong>Raspberry Pi 4B</strong> paired with a webcam and <strong>TensorFlow Lite</strong> for computer vision tasks.
       \b
      <div style="display: flex; justify-content: center; align-items: center;">
         <video width="500" height="500" controls style="display: block;">
@@ -350,10 +356,28 @@ export const projects: Project[] = [
         </video>
      </div>
      \b
-     <p> <em> Due to availability of Raspberry Pi Pico and weight considerations of the drone, we shifted to Rpi Pico, which provided similar functionalities.</em> </p>
+     <p> <em> Due to availability of <strong>Raspberry Pi Pico</strong> and weight considerations of the drone, we shifted to Rpi Pico, which provided similar functionalities.</em> </p>
      \b
 
     <h3 style="text-align: center;"><strong>Custom Transmitter</strong></h3>
+     <figure style="display: flex; align-items: center; justify-content: center; gap: 5px;">
+         <div style="max-width: 550px; text-align: left;">
+            <p>
+              We also custom designed our transmitter and receiver module. The circuit was designed, and the components were soldered onto a 
+             <strong>Vero board</strong>. We used <strong>two-axis joysticks</strong>, an <strong>Arduino Uno</strong>, and 
+             <strong>NRF24L01</strong> modules for wireless communication between the transmitter and receiver.  
+             We powered the microcontroller with a <strong>9V battery</strong> and used an <strong>ASM 1117</strong> voltage regulator to provide 3.3V for the 
+             NRF modules.
+            </p>
+         </div>
+       <img src="quadtrans.png" alt="Transmitter and Receiver Module" width="190" style="display: block;">
+     </figure>
+     \b 
+      <figure>
+       <figcaption style="text-align: center;"><em>NRF24L01 Testing</em></figcaption>
+       <p> We adjusted the potentiometer knob for increasing values and transmitted them to test real-time wireless communication between the modules. </p>
+       <img src="quadnrftesting.jpg" alt="Transmitter and Receiver testing"  width="350" style="display: block; margin: auto;">
+     </figure>
 
 
 
@@ -370,24 +394,24 @@ export const projects: Project[] = [
       <p>
       In this project, I developed a robotic car that is controlled by hand gestures using a custom-designed glove.
       </p>
-      <img src="GCC.png" alt="gcc" width="430" style="display: block; margin: auto;">
+      <img src="GCC.png" alt="gcc" width="400" style="display: block; margin: auto;">
       <p>
       \b
       <h3 style="text-align: center;"><strong>Project Overview</strong></h3>
       \b
-      I designed and soldered a transmitter circuit onto a vero board, which was embedded in the glove. The circuit consists of an Arduino Nano, an MPU6050 gyroscope/accelerometer, and an HC-05 Bluetooth module.
+     <p> I designed and soldered a transmitter circuit onto a vero board, which was embedded in the glove. The circuit consists of an Arduino Nano, an MPU6050 gyroscope/accelerometer, and an HC-05 Bluetooth module.
       As the hand moves, the MPU6050 detects the angular tilt and sends the updated values to the Arduino Nano using the I2C protocol. The Arduino processes this data and transmits corresponding movement commands through the HC-05 Bluetooth module via the UART protocol to another HC-05 module located in the robotic car. The second HC-05 forwards the received commands to an Arduino Mega, which then sends digital HIGH/LOW signals to an L293D motor driver, controlling the DC motors that drive the car's wheels.
       </p>
-
+\b
       <h3 style="text-align: center;"><strong>HC05 Pairing</strong></h3>
       \b
-      <div style="display: flex; justify-content: center; gap: 20px;">
-     <video width="330" height="720" controls style="display: block;">
+      <div style="display: flex; justify-content: center; gap: 5px;">
+     <video width="355" height="1200" controls style="display: block;">
         <source src="GCCpairing.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
   
-      <video width="330" height="720" controls style="display: block;">
+      <video width="355" height="1200" controls style="display: block;">
         <source src="GCCpairing2.mp4" type="video/mp4">
        Your browser does not support the video tag.
       </video>
@@ -403,6 +427,35 @@ export const projects: Project[] = [
       
     `,
     technologies: ["Circuit Design", "Soldering", "Wireless Communication", "Embedded"],
+  },
+  {
+    id: 6,
+    title: "FlexAssist: Vision-Controlled Soft Robotic Glove for Assisted Grasping",
+    shortDescription:
+      "Designed a vision-controlled soft robotic glove to assist individuals with partial motor loss in grasping tasks.",
+    fullDescription: `
+      <p>FlexAssist is an innovative project aimed at developing a vision-controlled soft robotic glove to assist individuals with partial motor loss in performing grasping tasks. This project combines elements of computer vision, soft robotics, and assistive technology to create a user-friendly and effective solution for improving quality of life.</p>
+      <h3 style="text-align: center;"><strong>Project Overview</strong></h3>
+      <h3 style="text-align: center;"><strong>Grasp Detection</strong></h3>
+       <div style="display: flex; justify-content: center; gap: 20px; align-items: center;">
+         <div style="text-align: center;">
+           <h5>Pinch Grip</h5>
+           <video width="330" height="1050" controls style="display: block;">
+              <source src="flexpinch.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+           </video>
+          </div>
+          <div style="text-align: center;">
+            <h5>Spherical Grip</h5>
+            <video width="330" height="1050" controls style="display: block;">
+              <source src="flexspherical.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+           </div> 
+        </div>
+
+    `,
+    technologies: ["Rehabilitation Soft Robotic Glove", "Computer Vision", "Hardware"],
   },
 ]
 
