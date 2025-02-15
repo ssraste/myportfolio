@@ -25,7 +25,7 @@ export const projects: Project[] = [
       <p>Defualt setting had default reward structure and PPO hyperparameters, due to which the agent explored all possible states which leads to high rewards and increased training time. 
        <img src="myo default reward table.png" alt="defaultreward" width="280" style="display: block; margin: auto;">
        <img src="myo default rewards.png" alt="defaultreward" width="550" style="display: block; margin: auto;">
-       <video width="510" height="360" controls style="display: block; margin: auto;" >
+       <video width="510" height="360" controls autoplay muted loop style="display: block; margin: auto;">
         <source src="myoinitial.mp4" type="video/mp4">
          Your browser does not support the video tag.
        </video>
@@ -42,7 +42,7 @@ export const projects: Project[] = [
       <p>To overcome the limitations of default settings, I introduced a custom reward structure to provide intermediate feedback, which encouraged desired behaviors and Penalized undesired actions. Later, I also fine-tuned the hyperparameters for stable updates. </p>
         <img src="myo custom rewards table.png" alt="customreward" width="420" style="display: block; margin: auto;">
 
-        <video width="510" height="360" controls style="display: block; margin: auto;" >
+        <video width="510" height="360" controls autoplay muted loop style="display: block; margin: auto;">
         <source src="myo_finaltraining.mp4" type="video/mp4">
          Your browser does not support the video tag.
        </video>
@@ -90,14 +90,14 @@ export const projects: Project[] = [
        <div style="display: flex; justify-content: center; gap: 10px; align-items: center;">
          <div style="text-align: center;">
            <h5>Without Collision Penalties</h5>
-           <video width="600" height="1050" controls style="display: block;">
+           <video width="600" height="1050" controls autoplay muted loop style="display: block; margin: auto;">
               <source src="carlacollision.mp4" type="video/mp4">
               Your browser does not support the video tag.
            </video>
           </div>
           <div style="text-align: center;">
             <h5>With Collision Penalties</h5>
-            <video width="600" height="1050" controls style="display: block;">
+            <video width="600" height="1050" controls autoplay muted loop style="display: block; margin: auto;">
               <source src="carlacollision2.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
@@ -156,7 +156,7 @@ export const projects: Project[] = [
       </ul>
       \b
       <h3 style="text-align: center;"><strong>Demo</strong></h3>
-        <video width="510" height="400" controls style="display: block; margin: auto;" >
+        <video width="510" height="400" controls autoplay muted loop style="display: block; margin: auto;">
         <source src="wrist.mp4" type="video/mp4">
          Your browser does not support the video tag.
        </video>
@@ -178,7 +178,7 @@ export const projects: Project[] = [
       <img src="cameraView.png" alt="camera" width="430" style="display: block;  margin: auto;">
 \b
       <h3 style="text-align: center;"><strong>Demo</strong></h3>
-        <video width="510" height="360" controls style="display: block; margin: auto;" >
+        <video width="510" height="360" controls autoplay muted loop style="display: block; margin: auto;">
         <source src="CPS.mp4" type="video/mp4">
          Your browser does not support the video tag.
        </video>
@@ -195,7 +195,7 @@ export const projects: Project[] = [
     fullDescription: `
       <h3 style="text-align: center;"><strong>Project Overview</strong></h3>
       <p>My peers and I developed a soft robotic snake limb that can move effectively in unstructured environments due to its flexibility and biomimetic design. We created a trapezoidal pneunet structure to enhance stability and adaptability.</p>
-        <video width="510" height="360" controls style="display: block; margin: auto;" >
+        <video width="510" height="360" controls autoplay muted loop style="display: block; margin: auto;">
         <source src="snake.mp4" type="video/mp4">
          Your browser does not support the video tag.
        </video>
@@ -215,10 +215,11 @@ export const projects: Project[] = [
       <p>Conducted mechanical testing on one of the actuators. Performed finite element analysis to understand the behavior of the soft structure. </p>
       \b
       <h5 style="text-align: center;">50 percent inflated limb</h5>
-      <video width="400" height="500" controls style="display: block; margin-left: auto; margin-right: auto;">
+      <video width="400" height="500" controls autoplay muted loop style="display: block; margin: auto;">
         <source src="50 percent inflation.mov" type="video/mp4">
         Your browser does not support the video tag.
       </video>
+      \b
       <div style="display: flex; justify-content: center; gap: 1px; align-items: center;">
        <div style="text-align: center;">
           <h5>1. Pressure vs Strain</h5>
@@ -267,21 +268,32 @@ export const projects: Project[] = [
     shortDescription:
       "Fabricated soft actuators, also conducted mechanical testing on them ",
     fullDescription: `
-      <p>In this project, I implemented RRT and RRT* path planning algorithm<p>
-      <img src="" alt="RRT" width="450" style="display: block; margin: auto;">
+      <p>Fabircation & Testing of different Soft Actuators<p>
 
-      <h3>Pneunets</h3>
+          <h3 style="text-align: center;"><strong>Fiber-reinforced actuators</strong></h3>
+     <video width="510" height="360" controls autoplay muted loop style="display: block; margin: auto;">
+       <source src="softfiberreinforced.mp4" type="video/mp4">
+       Your browser does not support the video tag.
+      </video>
+      \b
+      <h3 style="text-align: center;"><strong>Pneunets</strong></h3>
+      \b
       
-      <h3>Mckibben Artificial Muscles</h3>
-
-      <h3>Fiber-reinforced actuators</h3>
-
-      <h3>SMAs</h3>
-    
-      <video width="510" height="360" controls style="display: block; margin: auto;" >
-        <source src="" type="video/mp4">
-         Your browser does not support the video tag.
-       </video>
+   <figure style="text-align: center;">
+     <figcaption><em>Finite Element Analysis of Pneunet actuators</em></figcaption>
+      <video width="510" height="360" controls autoplay muted loop style="display: block; margin: auto;">
+       <source src="softpneu.mp4" type="video/mp4">
+       Your browser does not support the video tag.
+      </video>
+    </figure>
+\b
+    <h3 style="text-align: center;"><strong>Mckibben Artificial Muscles</strong></h3>
+\b
+    <h3 style="text-align: center;"><strong>SMA Finger actuator</strong></h3>
+     <video width="510" height="360" controls autoplay muted loop style="display: block; margin: auto;">
+       <source src="softsma.mp4" type="video/mp4">
+       Your browser does not support the video tag.
+      </video>
 
     `,
     technologies: ["FEA-Abaqus", "SMA", "Soft Actuators", "Mechanical Testing"],
@@ -315,9 +327,9 @@ export const projects: Project[] = [
      </figure>
 \b    
      <figure style="text-align: center;">
-       <div style="display: flex; justify-content: center; gap: 15px;">
+       <div style="display: flex; justify-content: center; gap: 20px;">
          <img src="quadchassis.png" alt="Quad Arm" width="300" style="display: block;">
-          <img src="quadchassis1.png" alt="Quad Arm 1" width="300" style="display: block;">
+          <img src="quadchassis1.png" alt="Quad Arm 1" width="220" style="display: block;">
        </div>
        <figcaption><em>3D Printed Arm</em></figcaption>
      </figure>
@@ -331,17 +343,16 @@ export const projects: Project[] = [
       \b
      <figure style="text-align: center;">
        <div style="display: flex; justify-content: center; gap: 15px;">
-         <img src="quadfcpcb.png" alt="Quadfcpcb" width="150" style="display: block;">
-         <img src="quadp.jpg" alt="Quadfcp" width="150" style="display: block;">
-         <img src="quadfc.png" alt="Quadfcpcb" width="150" style="display: block;">
+         <img src="quadfcpcb.png" alt="Quadfcpcb" width="180" style="display: block;">
+         <img src="quadfc.png" alt="Quadfcpcb" width="180" style="display: block;">
         </div>
        <figcaption><em>Flight-Controller</em></figcaption>
      </figure>
   
       <figure style="text-align: center;">
        <div style="display: flex; justify-content: center; gap: 15px;">
-         <img src="quadfctest.png" alt="Quadfcpcb" width="150" style="display: block;">
-         <img src="quadfctest1.png" alt="Quadfcpcb" width="150" style="display: block;">
+         <img src="quadfctest.png" alt="Quadfcpcb" width="160" style="display: block;">
+         <img src="quadfctest1.png" alt="Quadfcpcb" width="160" style="display: block;">
        </div>
        <figcaption><em>Custom Flight-Controller Testing</em></figcaption>
      </figure>
@@ -350,7 +361,7 @@ export const projects: Project[] = [
       <p> For human detection, we used a <strong>Raspberry Pi 4B</strong> paired with a webcam and <strong>TensorFlow Lite</strong> for computer vision tasks.
       \b
      <div style="display: flex; justify-content: center; align-items: center;">
-        <video width="500" height="500" controls style="display: block;">
+        <video width="500" height="500" controls autoplay muted loop style="display: block; margin: auto;">
           <source src="quaddetection.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
@@ -370,7 +381,7 @@ export const projects: Project[] = [
              NRF modules.
             </p>
          </div>
-       <img src="quadtrans.png" alt="Transmitter and Receiver Module" width="190" style="display: block;">
+       <img src="quadtrans.jpeg" alt="Transmitter and Receiver Module" width="290" style="display: block;">
      </figure>
      \b 
       <figure>
@@ -406,12 +417,12 @@ export const projects: Project[] = [
       <h3 style="text-align: center;"><strong>HC05 Pairing</strong></h3>
       \b
       <div style="display: flex; justify-content: center; gap: 5px;">
-     <video width="355" height="1200" controls style="display: block;">
+     <video width="355" height="1200" controls autoplay muted loop style="display: block; margin: auto;">
         <source src="GCCpairing.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
   
-      <video width="355" height="1200" controls style="display: block;">
+      <video width="355" height="1200" controls autoplay muted loop style="display: block; margin: auto;">
         <source src="GCCpairing2.mp4" type="video/mp4">
        Your browser does not support the video tag.
       </video>
@@ -419,7 +430,7 @@ export const projects: Project[] = [
 \b
       <h3 style="text-align: center;"><strong>Demo</strong></h3>
       \b
-        <video width="510" height="360" controls style="display: block; margin: auto;" >
+        <video width="510" height="360" controls autoplay muted loop style="display: block; margin: auto;">
         <source src="GCC.mp4" type="video/mp4">
          Your browser does not support the video tag.
        </video>
@@ -440,14 +451,14 @@ export const projects: Project[] = [
        <div style="display: flex; justify-content: center; gap: 20px; align-items: center;">
          <div style="text-align: center;">
            <h5>Pinch Grip</h5>
-           <video width="330" height="1050" controls style="display: block;">
+           <video width="330" height="1050" controls autoplay muted loop style="display: block; margin: auto;">
               <source src="flexpinch.mp4" type="video/mp4">
               Your browser does not support the video tag.
            </video>
           </div>
           <div style="text-align: center;">
             <h5>Spherical Grip</h5>
-            <video width="330" height="1050" controls style="display: block;">
+            <video width="330" height="1050" controls autoplay muted loop style="display: block; margin: auto;">
               <source src="flexspherical.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
