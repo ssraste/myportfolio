@@ -18,8 +18,25 @@ const ProjectCard = ({ project, onClick }: { project: Project; onClick: () => vo
       <div className="p-6">
         <h3 className="text-xl font-semibold mb-2 text-primary">{project.title}</h3>
         <p className="text-muted-foreground mb-4">{project.shortDescription}</p>
+
+        {/* Display video if available */}
+        {project.videos && project.videos.length > 0 && (
+          <div className="mb-4">
+            <video 
+              className="w-full h-50 object-cover rounded-lg"
+              autoPlay
+              loop
+              muted
+              playsInline
+            >
+              <source src={project.videos[0]} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        )}
+
+        {/* Technologies section */}
         <div className="mb-4">
-          <h4 className="text-sm font-semibold text-secondary mb-2">Technologies:</h4>
           <div className="flex flex-wrap gap-2">
             {project.technologies.map((tech, index) => (
               <span
@@ -31,11 +48,13 @@ const ProjectCard = ({ project, onClick }: { project: Project; onClick: () => vo
             ))}
           </div>
         </div>
+        
         <button className="text-primary hover:underline text-sm font-medium">Learn More →</button>
       </div>
     </motion.div>
   )
 }
+
 
 const ExpandedProject = ({ project, onClose }: { project: Project; onClose: () => void }) => {
   return (
@@ -60,7 +79,7 @@ const ExpandedProject = ({ project, onClose }: { project: Project; onClose: () =
         <div className="p-6">
           <h2 className="text-2xl font-bold mb-4 text-primary">{project.title}</h2>
           <div className="mb-6">
-            <h3 className="text-lg font-semibold text-secondary mb-2">Technologies:</h3>
+            <h3 className="text-lg font-semibold text-gray-400 mb-2">Technologies:</h3>
             <div className="flex flex-wrap gap-2">
               {project.technologies.map((tech, index) => (
                 <span
@@ -76,23 +95,6 @@ const ExpandedProject = ({ project, onClose }: { project: Project; onClose: () =
             className="prose max-w-none text-foreground"
             dangerouslySetInnerHTML={{ __html: project.fullDescription }}
           />
-          {project.videos && (
-            <div className="mt-6">
-              <h3 className="text-xl font-semibold mb-2 text-primary">Videos</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {project.videos.map((video, index) => (
-                  <div key={index} className="aspect-w-16 aspect-h-9">
-                    <iframe
-                      src={video}
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                      className="w-full h-full rounded"
-                    ></iframe>
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
           {project.reportLink && (
             <div className="mt-6">
               <a

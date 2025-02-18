@@ -55,6 +55,7 @@ export const projects: Project[] = [
     `,
     technologies: ["Reinforcement Learning", "MuJoCo", "MyoSuite"],
     reportLink: "/myosuite_Report.pdf",
+    videos: ["/myosuite.mp4"]
   },
   {
     id: 2,
@@ -80,28 +81,43 @@ export const projects: Project[] = [
       <h3 style="text-align: center;"><strong>Deep Q-Learning</strong></h3> 
       \b
        <div style="display: flex; justify-content: flex-start; align-items: center; gap: 20px;">
-         <img src="carlarl.png" alt="carlarl.png" width="350" style="display: block;">
+           <video width="350" height="1100" controls autoplay muted loop style="display: block; margin: auto;">
+              <source src="carlarl.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+           </video>
           <div>
-            <p> -----
+            <p> Unlike imitation learning, reinforcement learning uses <strong> exploration </strong> and <strong> exploitation </strong> strategies to maximize the reward function and select the most optimal path. 
+            I implemented <strong> Deep Q-Networks (DQN) </strong> and used an <strong> epsilon-greedy </strong> strategy for exploration. I created a <strong> replay buffer </strong>  to store the initial training data along with a <strong> reward function </strong>  to improve training. 
+            For stabilization, I used  <strong> policy network </strong>  for actions and <strong> target network </strong>. 
          </div>
         </div>
 
-\b
+      \b
        <div style="display: flex; justify-content: center; gap: 10px; align-items: center;">
          <div style="text-align: center;">
-           <h5>Without Collision Penalties</h5>
+           <h5>Without Collision Penalties (STUCK!!)</h5>
            <video width="600" height="1050" controls autoplay muted loop style="display: block; margin: auto;">
               <source src="carlacollision.mp4" type="video/mp4">
               Your browser does not support the video tag.
            </video>
           </div>
           <div style="text-align: center;">
-            <h5>With Collision Penalties</h5>
+            <h5>With Collision Penalties </h5>
             <video width="600" height="1050" controls autoplay muted loop style="display: block; margin: auto;">
               <source src="carlacollision2.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
            </div> 
+        </div>
+     \b 
+       <div style="display: flex; justify-content: flex-start; align-items: center; gap: 20px;">
+           <video width="350" height="1100" controls autoplay muted loop style="display: block; margin: auto;">
+              <source src="carlapedestrain.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+           </video>
+          <div>
+            <p> The agent stops when pedestrain is crossing!!! 
+         </div>
         </div>
 
     `,
@@ -111,6 +127,7 @@ export const projects: Project[] = [
       "Deep Q-Learning",
       "Imitation Learning",
     ],
+    videos: ["/carlarl.mp4"]
   },
   {
     id: 3,
@@ -164,6 +181,7 @@ export const projects: Project[] = [
     `,
     technologies: ["Rehabilitation Robotics", "Pygame", "Robotic Glove"],
     reportLink: "wrist.pdf",
+    videos: ["/wrist.mp4"]
   },
   {
     id: 4,
@@ -177,15 +195,11 @@ export const projects: Project[] = [
       <h5 style="text-align: center;">Camera View</h5>
       <img src="cameraView.png" alt="camera" width="430" style="display: block;  margin: auto;">
 \b
-      <h3 style="text-align: center;"><strong>Demo</strong></h3>
-        <video width="510" height="360" controls autoplay muted loop style="display: block; margin: auto;">
-        <source src="CPS.mp4" type="video/mp4">
-         Your browser does not support the video tag.
-       </video>
       
 
     `,
     technologies: ["Swarm Robotics", "Control Systems", "Hardware"],
+    videos: ["CPS.mp4"]
   },
   {
     id: 5,
@@ -195,10 +209,6 @@ export const projects: Project[] = [
     fullDescription: `
       <h3 style="text-align: center;"><strong>Project Overview</strong></h3>
       <p>My peers and I developed a soft robotic snake limb that can move effectively in unstructured environments due to its flexibility and biomimetic design. We created a trapezoidal pneunet structure to enhance stability and adaptability.</p>
-        <video width="510" height="360" controls autoplay muted loop style="display: block; margin: auto;">
-        <source src="snake.mp4" type="video/mp4">
-         Your browser does not support the video tag.
-       </video>
       \b
       <h3 style="text-align: center;"><strong>Design and Fabrication</strong></h3>
       <p> We designed CAD molds using SolidWorks and then 3D printed these molds with PLA. We chose Dragon Skin 10 silicone for fabricating the actuators due to its flexibility and stiffness. Each robot limb has three actuators, requiring six fabricated molds in total. We also designed a push notch to secure the actuators together. The robot is fully pneumatically actuated. The front limb is equipped with a granular gripper made from a rubber balloon filled with coffee beans, which is also pneumatically actuated to enable object grasping. </p>
@@ -244,23 +254,7 @@ export const projects: Project[] = [
       "Mechanical Testing",
       "Granular Jamming",
     ],
-  },
-  {
-    id: 9,
-    title: "Path Planning using RRT star",
-    shortDescription:
-      "Implementing RRT & RRT* path planning algorithms",
-    fullDescription: `
-      <img src="" alt="RRT" width="450" style="display: block; margin: auto;">
-      <h3>Project Ove</h3>
-    
-      <video width="510" height="360" controls style="display: block; margin: auto;" >
-        <source src="" type="video/mp4">
-         Your browser does not support the video tag.
-       </video>
-
-    `,
-    technologies: ["MATLAB", "Path Planning Alogrithms"],
+    videos: ["/snake.mp4"]
   },
   {
     id: 10,
@@ -297,6 +291,27 @@ export const projects: Project[] = [
 
     `,
     technologies: ["FEA-Abaqus", "SMA", "Soft Actuators", "Mechanical Testing"],
+    videos: ["/softfiberreinforced.mp4"]
+
+  },
+  {
+    id: 9,
+    title: "Path Planning using RRT star",
+    shortDescription:
+      "Implementing RRT & RRT* path planning algorithms",
+    fullDescription: `
+      <img src="" alt="RRT" width="450" style="display: block; margin: auto;">
+      <h3>Project Overview</h3>
+    
+      <video width="510" height="360" controls style="display: block; margin: auto;" >
+        <source src="" type="video/mp4">
+         Your browser does not support the video tag.
+       </video>
+
+    `,
+    technologies: ["MATLAB", "Path Planning Alogrithms"],
+    videos: ["/pathplanning.mp4"]
+
   },
   {
     id: 7,
@@ -390,12 +405,10 @@ export const projects: Project[] = [
        <img src="quadnrftesting.jpg" alt="Transmitter and Receiver testing"  width="350" style="display: block; margin: auto;">
      </figure>
 
-
-
-
-
     `,
-    technologies: ["Custom Designed", "PCB & CAD", "Hardware & Software", "TensorFlow"],
+    technologies: ["Custom Designed", "PCB & CAD", "Hardware & Software", "TensorFlow Lite"],
+    videos: ["/quaddetection.mp4"]
+
   },
   {
     id: 8,
@@ -437,7 +450,8 @@ export const projects: Project[] = [
 
       
     `,
-    technologies: ["Circuit Design", "Soldering", "Wireless Communication", "Embedded"],
+    technologies: ["Circuit Design", "Soldering", "Wireless Communication", "Arduino"],
+    videos: ["/GCC.mp4"]
   },
   {
     id: 6,
@@ -467,6 +481,7 @@ export const projects: Project[] = [
 
     `,
     technologies: ["Rehabilitation Soft Robotic Glove", "Computer Vision", "Hardware"],
+    videos: ["/flex.mp4"]
   },
 ]
 
