@@ -407,7 +407,7 @@ export const projects: Project[] = [
 
     `,
     technologies: ["Custom Designed", "PCB & CAD", "Hardware & Software", "TensorFlow Lite"],
-    videos: ["/quaddetection.mp4"]
+    videos: ["/quad.mp4"]
 
   },
   {
