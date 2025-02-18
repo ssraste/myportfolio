@@ -55,7 +55,7 @@ export const projects: Project[] = [
     `,
     technologies: ["Reinforcement Learning", "MuJoCo", "MyoSuite"],
     reportLink: "/myosuite_Report.pdf",
-    videos: ["/myosuite.mp4"]
+    videos: ["myosuite.mp4"]
   },
   {
     id: 2,
@@ -127,7 +127,7 @@ export const projects: Project[] = [
       "Deep Q-Learning",
       "Imitation Learning",
     ],
-    videos: ["/carlarl.mp4"]
+    videos: ["carlarl.mp4"]
   },
   {
     id: 3,
@@ -181,7 +181,7 @@ export const projects: Project[] = [
     `,
     technologies: ["Rehabilitation Robotics", "Pygame", "Robotic Glove"],
     reportLink: "wrist.pdf",
-    videos: ["/wrist.mp4"]
+    videos: ["wrist.mp4"]
   },
   {
     id: 4,
@@ -254,7 +254,7 @@ export const projects: Project[] = [
       "Mechanical Testing",
       "Granular Jamming",
     ],
-    videos: ["/snake.mp4"]
+    videos: ["snake.mp4"]
   },
   {
     id: 10,
@@ -291,7 +291,7 @@ export const projects: Project[] = [
 
     `,
     technologies: ["FEA-Abaqus", "SMA", "Soft Actuators", "Mechanical Testing"],
-    videos: ["/softfiberreinforced.mp4"]
+    videos: ["softfiberreinforced.mp4"]
 
   },
   {
@@ -310,7 +310,7 @@ export const projects: Project[] = [
 
     `,
     technologies: ["MATLAB", "Path Planning Alogrithms"],
-    videos: ["/pathplanning.mp4"]
+    videos: ["pathplanning.mp4"]
 
   },
   {
@@ -407,7 +407,7 @@ export const projects: Project[] = [
 
     `,
     technologies: ["Custom Designed", "PCB & CAD", "Hardware & Software", "TensorFlow Lite"],
-    videos: ["/quad.mp4"]
+    videos: ["quad.mp4"]
 
   },
   {
@@ -451,7 +451,7 @@ export const projects: Project[] = [
       
     `,
     technologies: ["Circuit Design", "Soldering", "Wireless Communication", "Arduino"],
-    videos: ["/GCC.mp4"]
+    videos: ["GCC.mp4"]
   },
   {
     id: 6,
@@ -481,7 +481,7 @@ export const projects: Project[] = [
 
     `,
     technologies: ["Rehabilitation Soft Robotic Glove", "Computer Vision", "Hardware"],
-    videos: ["/flex.mp4"]
+    videos: ["flex.mp4"]
   },
 ]
 
