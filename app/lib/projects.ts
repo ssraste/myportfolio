@@ -54,7 +54,6 @@ export const projects: Project[] = [
 
     `,
     technologies: ["Reinforcement Learning", "MuJoCo", "MyoSuite"],
-    reportLink: "/myosuite_Report.pdf",
     videos: ["myosuite.mp4"]
   },
   {
@@ -294,25 +293,7 @@ export const projects: Project[] = [
     videos: ["softfiberreinforced.mp4"]
 
   },
-  {
-    id: 9,
-    title: "Path Planning using RRT star",
-    shortDescription:
-      "Implementing RRT & RRT* path planning algorithms",
-    fullDescription: `
-      <img src="" alt="RRT" width="450" style="display: block; margin: auto;">
-      <h3>Project Overview</h3>
-    
-      <video width="510" height="360" controls style="display: block; margin: auto;" >
-        <source src="" type="video/mp4">
-         Your browser does not support the video tag.
-       </video>
 
-    `,
-    technologies: ["MATLAB", "Path Planning Alogrithms"],
-    videos: ["pathplanning.mp4"]
-
-  },
   {
     id: 7,
     title: "Human Detecting Quadcopter",
